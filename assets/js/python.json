@@ -1,0 +1,101 @@
+{
+    "course": [
+        {
+            "video": "https://www.youtube.com/embed/4F2m91eKmts",
+            "day": "Day 01",
+            "title": "Introduction to Python",
+            "description": "An introduction on python, its variables and the datatypes are discussed",
+            "quiz": "https://google.com",
+            "type": "true",
+            "date": "April 29 2020"
+        },
+        {
+            "video": "https://youtube.com/",
+            "day": "Day 02",
+            "title": "Python Functions",
+            "description": "print functions and integer and float methods are discussed",
+            "quiz": "https://google.com",
+            "type": "false",
+            "date": "April 30 2020"
+        },
+        {
+            "video": "https://youtube.com/",
+            "day": "Day 03",
+            "title": "Operators and Number Conversions",
+            "description": "Various operators and numeric conversions are discussed here",
+            "quiz": "https://google.com",
+            "type": "false",
+            "date": "May 01 2020"
+        },
+        {
+            "video": "https://youtube.com/",
+            "day": "Day 04",
+            "title": "Alternatives for pre-defined functions",
+            "description": "string and numeric conversions without pre-defined functions",
+            "quiz": "https://google.com",
+            "type": "false",
+            "date": "May 02 2020"
+        },
+        {
+            "video": "https://youtube.com/",
+            "day": "Day 05",
+            "title": "String and Memory Allocation",
+            "quiz": "https://google.com",
+            "description": "A deep look into string functions and how memory is allocated in python",
+            "type": "false",
+            "date": "May 03 2020"                       
+        },
+        {
+            "video": "https://youtube.com/",
+            "day": "Day 06",
+            "title": "Collections and Various List Methods",
+            "quiz": "https://google.com",
+            "description": "A discussion on different list and collection methods in python",
+            "type": "false",
+            "date": "May 04 2020"            
+        },
+        {
+            "video": "https://youtube.com/",
+            "day": "Day 07",
+            "title": "Sets, Tuples and Dictionary",
+            "quiz": "https://google.com",
+            "description": "Learn about the sets, tuples and dictionary usage in python",
+            "type": "false",
+            "date": "May 05 2020"            
+        },
+        {
+            "video": "https://youtube.com/",
+            "day": "Day 08",
+            "quiz": "https://google.com",
+            "title": "Conditional Statements",
+            "description": "Learn how conditional statements are used in python",
+            "type": "false",
+            "date": "May 06 2020"            
+        },
+        {
+            "video": "https://youtube.com/",
+            "day": "Day 09",
+            "quiz": "https://google.com",
+            "title": "Loops and List Comprehension",
+            "description": "Usage of loops and list comprehension in detail",
+            "type": "false",
+            "date": "May 07 2020"                   
+        },
+        {
+            "video": "https://youtube.com/",
+            "day": "Day 10",
+            "quiz": "https://google.com",
+            "title": "Functions in python",
+            "description": "Deep dive into functions in python and its usage",
+            "type": "false",
+            "date": "May 08 2020"            
+        },
+        {
+            "day": "Completion",            
+            "title": "Course Completion",
+            "description": "",
+            "quiz": "https://google.com",
+            "type": "false"
+        }                
+    ]
+}
