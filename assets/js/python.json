@@ -1,11 +1,11 @@
 {
     "course": [
         {
-            "video": "https://www.youtube.com/embed/4F2m91eKmts",
+            "video": "https://www.youtube.com/embed/lT9Q8A5DPSA",
             "day": "Day 01",
             "title": "Introduction to Python",
             "description": "An introduction on python, its variables and the datatypes are discussed",
-            "quiz": "https://google.com",
+            "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdFFS_V3NApIV0kVbLcWktmfkAY_OT0mtTrHBokrCgb1Ei4yg/viewform?usp=sf_link",
             "type": "true",
             "date": "April 29 2020"
         },

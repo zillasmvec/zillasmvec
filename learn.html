@@ -161,9 +161,13 @@
 
                             <div id="collapse${count}" class="collapse show" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">                               
-                                <p class="font-weight-bold p-2">Available by April 29th 9:35 AM</p>
-                                <p class="font-weight-light p-2">Sorry for the inconvenience</p>
-                                <div class="buttons mt-3"><a class="btn btn-secondary btn-sm disabled" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Attend Quiz</a></div>
+                                    <p class="h5 font-weight-bold m-2">${val.title}</p>
+                                    <p class="font-weight-light m-1" style="font-size:0.8em;">${val.description}</p>
+                                    <p class="font-weight-light p-1" style="font-size:0.8em"><strong>Course duration: 1 hour</strong> ${val.date} available(9:00 AM - 9:00 PM)</p>                                
+                                    <div class="embed-responsive embed-responsive-16by9 p-1">
+                                        <iframe class="embed-responsive-item" src="${val.video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                <div class="buttons mt-3"><a class="btn btn-secondary btn-sm" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Attend Quiz</a></div>
                                 </div>
                             </div>
                             </div>`;              
@@ -222,7 +226,7 @@
                                 <div class="card-body bg-dark">
                                     <p class="h5 font-weight-bold m-2">${val.title}</p>
                                     <p class="font-weight-light m-1" style="font-size:0.8em;">${val.description}</p>
-                                    <p class="font-weight-light p-1" style="font-size:0.8em"><strong>Course duration:</strong> ${val.date} 9:00 AM - 9:00 PM</p>                                
+                                    <p class="font-weight-light p-1" style="font-size:0.8em"><strong>Course duration: 1 hour</strong> ${val.date} available(9:00 AM - 9:00 PM)</p>                                
                                     <div class="embed-responsive embed-responsive-16by9 p-1">
                                         <iframe class="embed-responsive-item" src="${val.video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
@@ -284,7 +288,7 @@
                                 <div class="card-body bg-dark">                                
                                     <p class="h5 font-weight-bold m-2">${val.title}</p>
                                     <p class="font-weight-light m-1" style="font-size:0.8em;">${val.description}</p>
-                                    <p class="font-weight-light p-1" style="font-size:0.8em"><strong>Course duration:</strong> ${val.date} 9:00 AM - 9:00 PM</p>                                
+                                    <p class="font-weight-light p-1" style="font-size:0.8em"><strong>Course duration: 1 hour</strong> ${val.date} available(9:00 AM - 9:00 PM)</p>                                
                                     <div class="embed-responsive embed-responsive-16by9 p-1">
                                         <iframe class="embed-responsive-item" src="${val.video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
