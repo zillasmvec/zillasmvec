@@ -1,11 +1,11 @@
 {
     "course": [
         {
-            "video": "https://www.youtube.com/embed/4F2m91eKmts",
+            "video": "https://www.youtube.com/embed/IN-GhOBeQ08",
             "day": "Day 01",
             "title": "Introduction to Programming",
             "description": "Brief introduction to the programming concepts",
-            "quiz": "https://google.com",
+            "quiz": "https://forms.gle/f5UxbDwQ2XrU9AA58",
             "type": "true",
             "date": "April 29 2020"
         },

@@ -1,11 +1,11 @@
 {
     "course": [
         {
-            "video": "https://www.youtube.com/embed/4F2m91eKmts",
+            "video": "https://www.youtube.com/embed/BGYqzGWSyYU",
             "day": "Day 01",
             "title": "Introduction and Interface",
             "description": "A small introduction on the interface of the photoshop application is discussed.",
-            "quiz": "https://google.com",
+            "quiz": "https://docs.google.com/forms/d/e/1FAIpQLScBx9tFR-ldzuV4DDTD9xUcuuXD8w2TWoQGY2jglPi3ie16OA/viewform",
             "type": "true",
             "date": "April 29 2020"
         },
