@@ -237,7 +237,7 @@
                         if(course === 'python') {
                             $.each(data.python, function(pData) {                                                     
                                 let dates = data.python[pData].C_date.split(' ')[0].split('-')[2];                                                                
-                                if($('#user_email').val() === data.python[pData].Email && $("#user_day :selected").val() === dates) {
+                                if($('#user_email').val().toLowerCase() === data.python[pData].Email.toLowerCase() && $("#user_day :selected").val() === dates) {
                                     // user matched
                                     window.open(data.python[pData].url);                                    
                                     $('#cmessage').html('Certificate Generated!');                                
@@ -253,7 +253,7 @@
                         else if(course === 'c') {
                             $.each(data.c, function(cData) {            
                                 let dates = data.c[cData].C_date.split(' ')[0].split('-')[2];                 
-                                if($('#user_email').val() === data.c[cData].Email && $("#user_day :selected").val() === dates) {
+                                if($('#user_email').val().toLowerCase() === data.c[cData].Email.toLowerCase() && $("#user_day :selected").val() === dates) {
                                     // user matched
                                     window.open(data.c[cData].url);
                                     $('#cmessage').html('Certificate Generated!');                                
@@ -268,7 +268,7 @@
                         } else if(course === 'photoshop') {
                             $.each(data.photoshop, function(phData) {                            
                                 let dates = data.photoshop[phData].C_date.split(' ')[0].split('-')[2];                 
-                                if($('#user_email').val() === data.photoshop[phData].Email && $("#user_day :selected").val() === dates) {
+                                if($('#user_email').val().toLowerCase() === data.photoshop[phData].Email.toLowerCase() && $("#user_day :selected").val() === dates) {
                                     // user matched
                                     window.open(data.photoshop[phData].url);                                    
                                     $('#cmessage').html('Certificate Generated!');                                
