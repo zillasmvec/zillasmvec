@@ -1,41 +1,70 @@
- var form = document.getElementById("my-form");
-    var button = document.getElementById("my-form-button");
-    var status = document.getElementById("my-form-status");
+'use strict';
 
-    // Success and Error functions for after the form is submitted
-    
-    function success() {
-      form.reset();
-      button.style = "display: none ";
-      $('#my-form-status').html('Thanks! for making it!');
-    }
-
-    function error() {
-      $('#my-form-status').html( "Oops! There was a problem.");
-    }
-
-    // handle the form submission event
-
-    form.addEventListener("submit", function(ev) {
-      ev.preventDefault();
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
-    });
- 
+$(() => { 
+  $.get("https://jsonstorage.net/api/items/f89e0a84-ba60-4414-b8dc-8469fc14f4a8", 
+    function(data, textStatus, jqXHR) 
+    {
+      let testContent = '';
+      $('#tests').html('');
+      $.each(data.feedbacks, function(index) {
+        if(index===0){
+          testContent += `<div class="carousel-item active text-center">        
+          <img class="p-2" src="https://img.icons8.com/color/48/000000/user-group-man-woman.png"/>            
+          <p class="h6 font-weight-normal text-white">${data.feedbacks[index].name}</p>
+          <p class="h6 text-muted font-weight-light">${data.feedbacks[index].message}</p>
+          </div>`;
+        }else {
+          testContent += `<div class="carousel-item text-center">        
+                        <img class="p-2" src="https://img.icons8.com/color/48/000000/user-group-man-woman.png"/>            
+                        <p class="h6 font-weight-normal text-white">${data.feedbacks[index].name}</p>
+                        <p class="h6 text-muted font-weight-light">${data.feedbacks[index].message}</p>
+                        </div>`;
+        }
+              
+      });
   
-  // helper function for sending an AJAX request
+      $('#tests').html(testContent);
+    }
+  );
+  $('#feedback_form').submit((e) => {
 
-  function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
-      } else {
-        error(xhr.status, xhr.response, xhr.responseType);
-      }
+    $('#my-form-button').html('Please Wait...');
+    e.preventDefault();
+
+    let testimonal = {
+      name: $('#feedback_form').find('input[name="username"]').val(),
+      email: $('#feedback_form').find('input[name="email"]').val(),
+      message: $('#feedback_form').find('textarea[name="message"]').val()
     };
-    xhr.send(data);
-  }
+
+    // https://jsonstorage.net/api/items/f89e0a84-ba60-4414-b8dc-8469fc14f4a8
+
+
+    
+    $.get("https://jsonstorage.net/api/items/f89e0a84-ba60-4414-b8dc-8469fc14f4a8", 
+    function(data, textStatus, jqXHR) 
+    {
+         data.feedbacks.push(testimonal);
+
+      $.ajax({
+        url:"https://jsonstorage.net/api/items/f89e0a84-ba60-4414-b8dc-8469fc14f4a8",
+        type:"PUT",
+        data: JSON.stringify(data),
+        contentType:"application/json; charset=utf-8",
+        dataType:"json",
+        success: function(data, textStatus, jqXHR){
+          $('#my-form-button').html('SUBMIT');
+          $('#feedback_form').toggleClass('d-none');
+          $('#thanks_gap').toggleClass('d-none');
+        },
+        error: function(error) {
+          $('#my-form-button').html('SUBMIT');
+          $('#my-form-status').html('Something went wrong! Try again!');
+        }
+      }); 
+    });    
+      
+  });
+
+
+});
