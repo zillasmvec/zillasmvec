@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html style="background-color: #191919;color: #191919;">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -22,7 +21,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164931030-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164931030-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,7 +29,6 @@
 
   gtag('config', 'UA-164931030-1');
 </script>
-
 </head>
 <style>
     .main-img {
@@ -40,6 +38,9 @@
 @media only screen and (max-width: 600px) {
   .main-img {
     width: 90%;
+  }
+  #adc{
+      max-width: 300px;
   }
 }
 
@@ -148,6 +149,20 @@
                         </div>
                     </div>
     </div>
+    <div id="courseintro" style="height: 120vh;" class="d-sm-flex justify-content-sm-center align-items-sm-center">
+        <div class="container p-3">
+            <div class="row">                
+                <div class="col d-sm-flex justify-content-sm-center align-items-sm-center p-2">
+                    <iframe id="adc" class="d-sm-flex justify-content-sm-center align-items-sm-center" frameborder="0" width="560" height="315" src="https://biteable.com/watch/embed/even-more-professional-scenes-copy-2533006" allowfullscreen="true" allow="autoplay"></iframe>
+                </div>
+                <div class="col p-2 d-flex flex-column align-items-center justify-content-center">
+                    <lottie-player src="assets/img/ad.json" style="padding:0px;width:250px; height: 250px;" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                    <h4 class="mb-0">Introducing downloadable e - certificates</h4>
+                    <p class="text-muted" style="padding: 5px;">electronic certificates with QR code verification is available<p>                    
+                </div>                
+            </div>
+        </div>
+    </div>
     <div id="about" style="height: 60vh" class="fadeIn animated">
         <div class="container">
             <div class="row d-flex d-sm-flex flex-column justify-content-sm-center align-items-sm-center">
@@ -217,8 +232,9 @@
                 <div class="col-md-6 text-center d-flex justify-content-center align-items-center" style="padding: 10px;">
                     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                     <lottie-player
-    src="https://assets6.lottiefiles.com/datafiles/RsO0f9C8rU3E426/data.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay >
-</lottie-player></div>
+    src="https://assets6.lottiefiles.com/datafiles/RsO0f9C8rU3E426/data.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay>
+</lottie-player>
+</div>
             </div>
         </div>
     </div>
@@ -303,6 +319,7 @@
                         <p class="text-muted copyright" style="opacity: 1;">Made with <i class="fa fa-heart" style="color: #ff023e;"></i>&nbsp;by smveczilla 2020</p>
                         <p class="text-muted copyright" style="opacity: 1;">hosted with <i class="fa fa-fire" style="color: #ff7402;"></i>&nbsp;<a href="https://github.com" class="github">GitHub</a></p>
                         <p class="text-muted p-1" style="font-size: 10px;">Icons by <a href="https://icons8.com">Icons8</a></p>
+                        <p class="text-muted p-0" style="font-size: 10px;">Ad Video by <a href="https://biteable.com">Biteable</a></p>
                         <p class="mt-2"><a href="https://prakashjaw.bss.design"><img src="https://img.shields.io/badge/developer-prakashjaw-blue.svg?style=flat" alt="author"></a></p>
                     </div>
                 </div>
@@ -313,5 +330,17 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
-
+<script>
+    // LottieInteractivity.create({
+    //   mode: 'scroll',
+    //   player: '#firstLottie',
+    //   actions: [
+    //       {
+    //         visibility:[0,1],
+    //         type: 'seek',
+    //         frames: [0, 141],
+    //       },
+    //     ],
+    // });
+    </script>
 </html>
