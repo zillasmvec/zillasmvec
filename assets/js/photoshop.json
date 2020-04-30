@@ -6,16 +6,16 @@
             "title": "Introduction and Interface",
             "description": "A small introduction on the interface of the photoshop application is discussed.",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLScBx9tFR-ldzuV4DDTD9xUcuuXD8w2TWoQGY2jglPi3ie16OA/viewform",
-            "type": "true",
+            "type": "over",
             "date": "April 29 2020"
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/BiIq-yFO2CA",
             "day": "Day 02",
             "title": "Basic Tools",
             "description": "",
-            "quiz": "https://google.com",
-            "type": "false",
+            "quiz": "https://forms.gle/W1ZwzsscaPHmYEMw5",
+            "type": "true",
             "date": "April 30 2020"
         },
         {

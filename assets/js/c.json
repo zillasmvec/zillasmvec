@@ -6,16 +6,16 @@
             "title": "Introduction to Programming",
             "description": "Brief introduction to the programming concepts",
             "quiz": "https://forms.gle/f5UxbDwQ2XrU9AA58",
-            "type": "true",
+            "type": "over",
             "date": "April 29 2020"
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/7zwW1sBVKgs",
             "day": "Day 02",
             "title": "Set Up the environment for C",
             "description": "setting up the development environment to write programs in C",
-            "quiz": "https://google.com",
-            "type": "false",
+            "quiz": "https://forms.gle/6kpGTuQcNVEPAFEYA",
+            "type": "true",
             "date": "April 30 2020"
         },
         {

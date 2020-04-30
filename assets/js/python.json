@@ -1,21 +1,21 @@
 {
     "course": [
         {
-            "video": "https://www.youtube.com/embed/lT9Q8A5DPSA",
+            "video": "https://www.youtube.com/embed/4vyqsZ7_7wE",
             "day": "Day 01",
             "title": "Introduction to Python",
             "description": "An introduction on python, its variables and the datatypes are discussed",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdFFS_V3NApIV0kVbLcWktmfkAY_OT0mtTrHBokrCgb1Ei4yg/viewform?usp=sf_link",
-            "type": "true",
+            "type": "over",
             "date": "April 29 2020"
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/Nm2RHqW5dss",
             "day": "Day 02",
             "title": "Python Functions",
             "description": "print functions and integer and float methods are discussed",
-            "quiz": "https://google.com",
-            "type": "false",
+            "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSfB0jUEHjawvTgrQ76vqJpj5cd5icdWu9pmAaQanRMR2fuS5w/viewform?usp=sf_link",
+            "type": "true",
             "date": "April 30 2020"
         },
         {

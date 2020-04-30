@@ -419,3 +419,13 @@
     opacity: 1;
   }
 }
+
+
+.github{
+  color: white;
+}
+
+.github:hover{
+  text-decoration: none;
+  color: white;
+}

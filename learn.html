@@ -20,6 +20,56 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/Team-Grid.css">
 </head>
+    
+ <style>
+ /* Make it a marquee */
+.marquee {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 50s linear infinite;
+    color: white;
+}
+
+.marquee:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { text-indent: 27.5em }
+    100% { text-indent: -105em }
+}
+
+.outer {
+  position: absolute;
+    
+  width: 120px;
+  height: 31px;
+  
+  background-image: url(http://matthewjamestaylor.com/blog/selection.gif);
+  
+  border: 1px solid;
+}
+
+.selected {
+  border: 0px;
+}
+
+.inner {
+  position:absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;  
+}
+
+.selected .inner {
+  margin: 1px;
+}
+ </style>
 
 <body style="background-color: #191919;color: #ffffff;">
     <nav class="navbar navbar-dark navbar-expand-md sticky-top navigation-clean" style="background-color: #111111;color: #191919;">
@@ -46,10 +96,15 @@
                 <div class="row">
                     <div class="buttons ml-3 p-1"><a class="btn btn-secondary btn-sm" role="button" data-toggle="modal" data-target="#authorModal" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">View Author</a></div>
                     <div class="buttons ml-3 p-1"><a class="btn btn-secondary btn-sm" role="button" data-toggle="modal" data-target="#guideModal" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Course Guidelines</a></div>
-                    <div class="buttons ml-3 p-1"><a class="btn btn-secondary btn-sm" role="button" href="https://forms.gle/ekpU2KGDBYGaPKHJ7" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Queries & FAQs</a></div>
-                    <div class="buttons ml-3 p-1"><a class="btn btn-secondary btn-sm" role="button" href="discussion.html" style="background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Join Discussion</a></div>                    
+                    <div class="buttons ml-3 p-1"><a class="btn btn-secondary btn-sm" role="button" href="https://forms.gle/ekpU2KGDBYGaPKHJ7" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Queries & FAQs</a></div>                    
+                        <div class="buttons ml-3 p-1">
+                            <div class="outer selected">
+                            <a class="btn btn-secondary btn-sm inner" role="button" data-toggle="modal" data-target="#certificatemodal" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Get Certificate</a></div>
+                        </div>                                                            
                 </div>                
-
+                <div class="row p-2 mb-1">
+                    <p class="marquee p-1">Please attend the quiz once you completed the video, attending the quiz will only get your certified. Download your E- Participation Certificates via GET CERTIFICATE BUTTON ABOVE</p>
+                </div>
             <br/>
             <div class="accordion" id="accordionExample">
                                                             
@@ -71,7 +126,32 @@
             </div>
         </div>
 
-        <div class="modal fade" id="guideModal" tabindex="-1" role="dialog" aria-labelledby="authorModal" aria-hidden="true">
+        <div class="modal fade" id="certificatemodal" tabindex="-1" role="dialog" aria-labelledby="certificatemodal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">                
+                <div class="modal-body text-white bg-dark">
+                        <p class="h5 font-weight-normal">Get you E-Certificate</p>
+                        <p class="h6 font-weight-light">Available: <strong>Yesterday's Certificate will be before 11 am</strong></p>
+                        <!-- <p class="h6 font-weight-light">Available: <strong>Participation Certificate</strong></p> -->
+                        <!-- <p class="text-muted">use the email address that you used to attend the quiz</p>
+                        <form id="certify">
+                            <input id="user_email" required type="email" class="form-control form-control-sm" name="email" placeholder="Email Address"/><br/>
+                            <select class="form-control form-control-sm" name="days" id="user_day" required>
+                                <option value="0" selected disabled>Select Day</option>
+                                <option value="30f">Day 01</option>
+                            </select><br/>
+                            <input type="submit" class="btn btn-sm" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);border: none;" value="Download"/>
+                        </form> -->
+                        <p class="font-weight-normal p-1" id="cmessage"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" onclick="clearMe()" data-dismiss="modal">Close</button>                  
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="guideModal" tabindex="-1" role="dialog" aria-labelledby="guideModal" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">                
                 <div class="modal-body text-white bg-dark">
@@ -121,15 +201,108 @@
     <span id="beta" class="ml-1 small text-danger">V 1.0.0</span>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>    
 </body>
 <script>
     $(() => {        
         let url = window.location.href;
         let url_string = new URL(url);
         var course = url_string.searchParams.get("course");
-        updateCourse(course);
+        $('#user_email').val('');                                
+        if(course!==''&&course!==null&&course!==undefined) {
+            updateCourse(course);        
+        } else {            
+            alert('Course not found!');
+            window.location.replace('/courses.html');            
+        }        
+        $('#cmessage').html('');
+
+        $('#certify').submit((e) => {
+            e.preventDefault();
+            $('#cmessage').html('');
+            $('#cmessage').html('Please Wait...');
+
+            let datte = $("#user_day :selected").val();
+
+            if(datte !== null && datte !== '' && datte !== undefined) {
+
+                let URL = `https://raw.githubusercontent.com/zillasmvec/sample/master/${datte}.json`;            
+        
+                $.ajax({
+                    url: URL,
+                    method: "get",                
+                    success: function(response) {
+                        let data = JSON.parse(response);
+
+                        if(course === 'python') {
+                            $.each(data.python, function(pData) {                                                     
+                                let dates = data.python[pData].C_date.split(' ')[0].split('-')[2];                                                                
+                                if($('#user_email').val() === data.python[pData].Email && $("#user_day :selected").val() === `${dates}f`) {
+                                    // user matched
+                                    window.open(data.python[pData].url);                                    
+                                    $('#cmessage').html('Certificate Generated!');                                
+                                    $('#certificatemodal').modal('hide');
+                                    
+                                    $('#user_email').val('');                                
+                                    $('#cmessage').html('');                                
+                                } else {
+                                    $('#cmessage').html('Email address not attended quiz');
+                                }
+                            });
+                        } 
+                        else if(course === 'c') {
+                            $.each(data.c, function(cData) {            
+                                let dates = data.c[cData].C_date.split(' ')[0].split('-')[2];                 
+                                if($('#user_email').val() === data.c[cData].Email && $("#user_day :selected").val() === `${dates}f`) {
+                                    // user matched
+                                    window.open(data.c[cData].url);
+                                    $('#cmessage').html('Certificate Generated!');                                
+                                    $('#certificatemodal').modal('hide');
+                                    
+                                    $('#user_email').val('');                                
+                                    $('#cmessage').html('');                                
+                                } else {
+                                    $('#cmessage').html('Email address not attended quiz');
+                                }
+                            });
+                        } else if(course === 'photoshop') {
+                            $.each(data.photoshop, function(phData) {                            
+                                let dates = data.photoshop[phData].C_date.split(' ')[0].split('-')[2];                 
+                                if($('#user_email').val() === data.photoshop[phData].Email && $("#user_day :selected").val() === `${dates}f`) {
+                                    // user matched
+                                    window.open(data.photoshop[phData].url);                                    
+                                    $('#cmessage').html('Certificate Generated!');                                
+                                    $('#certificatemodal').modal('hide');
+                                    
+                                    $('#user_email').val('');                                
+                                    $('#cmessage').html('');                                
+                                } else {
+                                    $('#cmessage').html('Email address not attended quiz');
+                                }
+                            });
+                        }
+                        else {
+                            $('#cmessage').html('Not a valid course');
+                        } 
+
+                        
+                    },
+                    error: function(error) {
+                        $('#cmessage').html('Something went wrong!');
+                    }
+                });     
+
+            } else {
+                $('#cmessage').html('Select a valid day');
+            }                      
+
+        });
     });
+    
+    function clearMe() {
+        $('#user_email').val('');   
+        $('#cmessage').html('');
+    }
 
     let updateCourse = (course) => {
         
@@ -158,7 +331,6 @@
                                 </button>
                                 </h2>
                             </div>
-
                             <div id="collapse${count}" class="collapse show" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">                               
                                     <p class="h5 font-weight-bold m-2">${val.title}</p>
@@ -171,7 +343,8 @@
                                 </div>
                             </div>
                             </div>`;              
-                    } else {
+                    } 
+                    else if(val.type === 'over') {
                         output += `<div class="card" style="background-color: #111111;">
                             <div class="card-header" id="${count}" style="cursor: pointer; border-bottom: 1px solid whitesmoke;" data-toggle="collapse" data-target="#collapse${count}" aria-expanded="true" aria-controls="collapseOne">
                                 <h2 class="mb-0">
@@ -180,7 +353,28 @@
                                 </button>
                                 </h2>
                             </div>
-
+                            <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
+                                <div class="card-body bg-dark">                               
+                                    <p class="h5 font-weight-bold m-2">${val.title}</p>
+                                    <p class="font-weight-light m-1" style="font-size:0.8em;">${val.description}</p>
+                                    <p class="font-weight-light p-1" style="font-size:0.8em"><strong>Course duration: 1 hour</strong> ${val.date} available(9:00 AM - 9:00 PM)</p>                                
+                                    <div class="embed-responsive embed-responsive-16by9 p-1">
+                                        <iframe class="embed-responsive-item" src="${val.video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                <div class="buttons mt-3"><a class="btn btn-secondary btn-sm disabled" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Attend Quiz</a></div>
+                                </div>
+                            </div>
+                            </div>`;       
+                    }
+                    else {
+                        output += `<div class="card" style="background-color: #111111;">
+                            <div class="card-header" id="${count}" style="cursor: pointer; border-bottom: 1px solid whitesmoke;" data-toggle="collapse" data-target="#collapse${count}" aria-expanded="true" aria-controls="collapseOne">
+                                <h2 class="mb-0">
+                                <button class="btn btn-link font-weight-bold" style="text-decoration: none;color:#f0174b" type="button" >
+                                    ${val.day}
+                                </button>
+                                </h2>
+                            </div>
                             <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">
                                     <p class="h5 font-weight-light m-2">I know your interested</p>
@@ -221,7 +415,6 @@
                                 </button>
                                 </h2>
                             </div>
-
                             <div id="collapse${count}" class="collapse show" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">
                                     <p class="h5 font-weight-bold m-2">${val.title}</p>
@@ -234,7 +427,9 @@
                                 </div>
                             </div>
                             </div>`;              
-                    } else {
+                    }
+
+                    else if(val.type === 'over') {
                         output += `<div class="card" style="background-color: #111111;">
                             <div class="card-header" id="${count}" style="cursor: pointer; border-bottom: 1px solid whitesmoke;" data-toggle="collapse" data-target="#collapse${count}" aria-expanded="true" aria-controls="collapseOne">
                                 <h2 class="mb-0">
@@ -243,7 +438,29 @@
                                 </button>
                                 </h2>
                             </div>
-
+                            <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
+                                <div class="card-body bg-dark">                               
+                                    <p class="h5 font-weight-bold m-2">${val.title}</p>
+                                    <p class="font-weight-light m-1" style="font-size:0.8em;">${val.description}</p>
+                                    <p class="font-weight-light p-1" style="font-size:0.8em"><strong>Course duration: 1 hour</strong> ${val.date} available(9:00 AM - 9:00 PM)</p>                                
+                                    <div class="embed-responsive embed-responsive-16by9 p-1">
+                                        <iframe class="embed-responsive-item" src="${val.video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                <div class="buttons mt-3"><a class="btn btn-secondary btn-sm disabled" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Attend Quiz</a></div>
+                                </div>
+                            </div>
+                            </div>`;       
+                    }
+                    
+                     else {
+                        output += `<div class="card" style="background-color: #111111;">
+                            <div class="card-header" id="${count}" style="cursor: pointer; border-bottom: 1px solid whitesmoke;" data-toggle="collapse" data-target="#collapse${count}" aria-expanded="true" aria-controls="collapseOne">
+                                <h2 class="mb-0">
+                                <button class="btn btn-link font-weight-bold" style="text-decoration: none;color:#f0174b" type="button" >
+                                    ${val.day}
+                                </button>
+                                </h2>
+                            </div>
                             <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">
                                     <p class="h5 font-weight-light m-2">I know your interested</p>
@@ -283,7 +500,6 @@
                                 </button>
                                 </h2>
                             </div>
-
                             <div id="collapse${count}" class="collapse show" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">                                
                                     <p class="h5 font-weight-bold m-2">${val.title}</p>
@@ -297,7 +513,8 @@
                                 </div>
                             </div>
                             </div>`;              
-                    } else {
+                    } 
+                    else if(val.type === 'over') {
                         output += `<div class="card" style="background-color: #111111;">
                             <div class="card-header" id="${count}" style="cursor: pointer; border-bottom: 1px solid whitesmoke;" data-toggle="collapse" data-target="#collapse${count}" aria-expanded="true" aria-controls="collapseOne">
                                 <h2 class="mb-0">
@@ -306,7 +523,28 @@
                                 </button>
                                 </h2>
                             </div>
-
+                            <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
+                                <div class="card-body bg-dark">                               
+                                    <p class="h5 font-weight-bold m-2">${val.title}</p>
+                                    <p class="font-weight-light m-1" style="font-size:0.8em;">${val.description}</p>
+                                    <p class="font-weight-light p-1" style="font-size:0.8em"><strong>Course duration: 1 hour</strong> ${val.date} available(9:00 AM - 9:00 PM)</p>                                
+                                    <div class="embed-responsive embed-responsive-16by9 p-1">
+                                        <iframe class="embed-responsive-item" src="${val.video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                <div class="buttons mt-3"><a class="btn btn-secondary btn-sm disabled" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Attend Quiz</a></div>
+                                </div>
+                            </div>
+                            </div>`;       
+                    }
+                    else {
+                        output += `<div class="card" style="background-color: #111111;">
+                            <div class="card-header" id="${count}" style="cursor: pointer; border-bottom: 1px solid whitesmoke;" data-toggle="collapse" data-target="#collapse${count}" aria-expanded="true" aria-controls="collapseOne">
+                                <h2 class="mb-0">
+                                <button class="btn btn-link font-weight-bold" style="text-decoration: none;color:#f0174b" type="button" >
+                                    ${val.day}
+                                </button>
+                                </h2>
+                            </div>
                             <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">
                                     <p class="h5 font-weight-light m-2">I know your interested</p>
@@ -327,4 +565,9 @@
     }
 
 </script>
+<style>
+    #cmessage {
+        color: red;
+    }
+</style>
 </html>
