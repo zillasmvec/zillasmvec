@@ -81,16 +81,14 @@
         if(id!==null&&id!==undefined&&id!=='' && email!==null&&email!==undefined&&email!=='') {
             // clear   
 
-            let url = 'https://raw.githubusercontent.com/dscsmvec/sample/master/eparticipate.json';            
+            let url = 'https://raw.githubusercontent.com/zillasmvec/sample/master/29.json';            
         
             $.ajax({
                 url: url,
                 method: "get",
                 
                 success: function(response) {                    
-                    let data = JSON.parse(response);
-
-                    console.log(response);
+                    let data = JSON.parse(response);        
 
                     let dataArr = [];
 

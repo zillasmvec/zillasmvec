@@ -49,7 +49,7 @@
   width: 120px;
   height: 31px;
   
-  background-image: url(http://matthewjamestaylor.com/blog/selection.gif);
+  background-image: url(https://matthewjamestaylor.com/blog/selection.gif);
   
   border: 1px solid;
 }
@@ -131,17 +131,17 @@
               <div class="modal-content">                
                 <div class="modal-body text-white bg-dark">
                         <p class="h5 font-weight-normal">Get you E-Certificate</p>
-                        <p class="h6 font-weight-light">Available: <strong>Yesterday's Certificate will be before 11 am</strong></p>
-                        <!-- <p class="h6 font-weight-light">Available: <strong>Participation Certificate</strong></p> -->
-                        <!-- <p class="text-muted">use the email address that you used to attend the quiz</p>
+                        <!-- <p class="h6 font-weight-light">Available: <strong>Yesterday's Certificate will be before 11 am</strong></p> -->
+                        <p class="h6 font-weight-light">Available: <strong>Participation Certificate</strong></p>
+                        <p class="text-muted">use the email address that you used to attend the quiz</p>
                         <form id="certify">
                             <input id="user_email" required type="email" class="form-control form-control-sm" name="email" placeholder="Email Address"/><br/>
                             <select class="form-control form-control-sm" name="days" id="user_day" required>
                                 <option value="0" selected disabled>Select Day</option>
-                                <option value="30f">Day 01</option>
+                                <option value="29">Day 01</option>
                             </select><br/>
                             <input type="submit" class="btn btn-sm" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);border: none;" value="Download"/>
-                        </form> -->
+                        </form>
                         <p class="font-weight-normal p-1" id="cmessage"></p>
                 </div>
                 <div class="modal-footer">
@@ -237,7 +237,7 @@
                         if(course === 'python') {
                             $.each(data.python, function(pData) {                                                     
                                 let dates = data.python[pData].C_date.split(' ')[0].split('-')[2];                                                                
-                                if($('#user_email').val() === data.python[pData].Email && $("#user_day :selected").val() === `${dates}f`) {
+                                if($('#user_email').val() === data.python[pData].Email && $("#user_day :selected").val() === dates) {
                                     // user matched
                                     window.open(data.python[pData].url);                                    
                                     $('#cmessage').html('Certificate Generated!');                                
@@ -253,7 +253,7 @@
                         else if(course === 'c') {
                             $.each(data.c, function(cData) {            
                                 let dates = data.c[cData].C_date.split(' ')[0].split('-')[2];                 
-                                if($('#user_email').val() === data.c[cData].Email && $("#user_day :selected").val() === `${dates}f`) {
+                                if($('#user_email').val() === data.c[cData].Email && $("#user_day :selected").val() === dates) {
                                     // user matched
                                     window.open(data.c[cData].url);
                                     $('#cmessage').html('Certificate Generated!');                                
@@ -268,7 +268,7 @@
                         } else if(course === 'photoshop') {
                             $.each(data.photoshop, function(phData) {                            
                                 let dates = data.photoshop[phData].C_date.split(' ')[0].split('-')[2];                 
-                                if($('#user_email').val() === data.photoshop[phData].Email && $("#user_day :selected").val() === `${dates}f`) {
+                                if($('#user_email').val() === data.photoshop[phData].Email && $("#user_day :selected").val() === dates) {
                                     // user matched
                                     window.open(data.photoshop[phData].url);                                    
                                     $('#cmessage').html('Certificate Generated!');                                
