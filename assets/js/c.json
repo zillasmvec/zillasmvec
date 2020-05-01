@@ -15,16 +15,16 @@
             "title": "Set Up the environment for C",
             "description": "setting up the development environment to write programs in C",
             "quiz": "https://forms.gle/6kpGTuQcNVEPAFEYA",
-            "type": "true",
+            "type": "over",
             "date": "April 30 2020"
         },
         {
-            "video": "https://youtube.com/",
+            "video": "",
             "day": "Day 03",
-            "title": "What is Tokens",
-            "description": "discussion on tokens in C programming language",
-            "quiz": "https://google.com",
-            "type": "false",
+            "title": "Today is a Test Session",
+            "description": "Lets check how much you know till now!",
+            "quiz": "https://forms.gle/bPcJf7twrcjxPMUh9",
+            "type": "true",
             "date": "May 01 2020"
         },
         {

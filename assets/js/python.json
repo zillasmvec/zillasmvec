@@ -15,16 +15,16 @@
             "title": "Python Functions",
             "description": "print functions and integer and float methods are discussed",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSfB0jUEHjawvTgrQ76vqJpj5cd5icdWu9pmAaQanRMR2fuS5w/viewform?usp=sf_link",
-            "type": "true",
+            "type": "over",
             "date": "April 30 2020"
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/MnO8venflD8",
             "day": "Day 03",
             "title": "Operators and Number Conversions",
             "description": "Various operators and numeric conversions are discussed here",
-            "quiz": "https://google.com",
-            "type": "false",
+            "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSf-Y81BCXSI5lIp10FRqR8NRu9ece8Uifr_wDh0fElGOMbakA/viewform?usp=sf_link",
+            "type": "true",
             "date": "May 01 2020"
         },
         {
