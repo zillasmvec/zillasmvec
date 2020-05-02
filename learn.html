@@ -140,6 +140,7 @@
                                 <option value="0" selected disabled>Select Day</option>
                                 <option value="29">Day 01</option>
                                 <option value="30">Day 02</option>
+                                <option value="01">Day 03</option>
                             </select><br/>
                             <input type="submit" class="btn btn-sm" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);border: none;" value="Download"/>
                         </form>
@@ -424,12 +425,33 @@
                                     <p class="h5 font-weight-bold m-2">${val.title}</p>
                                     <p class="font-weight-light m-1" style="font-size:0.8em;">${val.description}</p>
                                     <p class="font-weight-light p-1" style="font-size:0.8em"><strong>Course duration: 1 hour</strong> ${val.date} available(9:00 AM - 9:00 PM)</p>                                                                    
-                                <div class="buttons mt-3"><a class="btn btn-secondary btn-lg" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Attend Quiz</a></div>
+                                    <div class="embed-responsive embed-responsive-16by9 p-1">
+                                        <iframe class="embed-responsive-item" src="${val.video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                <div class="buttons mt-3"><a class="btn btn-secondary btn-sm" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Attend Quiz</a></div>
                                 </div>
                             </div>
                             </div>`;              
+                    } 
+                    else if(val.type === 'over' && val.day === "Day 03") {
+                        output += `<div class="card" style="background-color: #111111;">
+                            <div class="card-header" id="${count}" style="cursor: pointer; border-bottom: 1px solid whitesmoke;" data-toggle="collapse" data-target="#collapse${count}" aria-expanded="true" aria-controls="collapseOne">
+                                <h2 class="mb-0">
+                                <button class="btn btn-link font-weight-bold" style="text-decoration: none;color:#f0174b" type="button" >
+                                    ${val.day}
+                                </button>
+                                </h2>
+                            </div>
+                            <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
+                                <div class="card-body bg-dark">                               
+                                    <p class="h5 font-weight-bold m-2">${val.title}</p>
+                                    <p class="font-weight-light m-1" style="font-size:0.8em;">${val.description}</p>
+                                    <p class="font-weight-light p-1" style="font-size:0.8em"><strong>Course duration: 1 hour</strong> ${val.date} available(9:00 AM - 9:00 PM)</p>                                                                    
+                                <div class="buttons mt-3"><a class="btn btn-secondary btn-sm disabled" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Attend Quiz</a></div>
+                                </div>
+                            </div>
+                            </div>`;   
                     }
-
                     else if(val.type === 'over') {
                         output += `<div class="card" style="background-color: #111111;">
                             <div class="card-header" id="${count}" style="cursor: pointer; border-bottom: 1px solid whitesmoke;" data-toggle="collapse" data-target="#collapse${count}" aria-expanded="true" aria-controls="collapseOne">

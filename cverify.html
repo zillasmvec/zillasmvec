@@ -77,14 +77,58 @@
         let url_string = new URL(url);
         var id = url_string.searchParams.get("id");
         var email = url_string.searchParams.get("email");
+        var valid = url_string.searchParams.get("valid");
 
         if(id!==null&&id!==undefined&&id!=='' && email!==null&&email!==undefined&&email!=='') {
             // clear   
 
-            let url = 'https://raw.githubusercontent.com/zillasmvec/sample/master/29.json';            
-            let url1 = 'https://raw.githubusercontent.com/zillasmvec/sample/master/30.json';
+            if(valid!==null&&valid!==undefined&&valid!=='') {
+                let validurl = `https://raw.githubusercontent.com/zillasmvec/sample/master/${valid}.json`;   
+                $.ajax({
+                url: validurl,
+                method: "get",
+                
+                success: function(response) {                    
+                    let data = JSON.parse(response);        
 
-            $.ajax({
+                    let dataArr = [];
+
+                    dataArr.push(data.python);
+                    dataArr.push(data.c);
+                    dataArr.push(data.photoshop);
+                    
+                    var count = 1;
+                    for(var i = 0; i < dataArr.length; i++) {
+                        $.each(dataArr[i], function(pata) {    
+                            let mail = dataArr[i][pata].Email.toLowerCase(); 
+                            let mail2 = email.toLowerCase();                                                                                      
+                            if(dataArr[i][pata].UUID === id && mail.trim() === mail2.trim()) {
+                               count = 0;
+                            }
+                    });
+                    }
+
+                    if(count===0){
+                        $('#c_loader').toggleClass('d-none');
+                        $('#c_status').html('STATUS: <span class="badge badge-success badge-pill">VERIFIED</span>');
+                    }else{
+                        $('#c_loader').toggleClass('d-none');
+                        $('#c_status').html('STATUS: <span class="badge badge-danger badge-pill">NOT VERIFIED</span>');                       
+                    }
+                   
+                },
+                error: function(error){
+                    $('#c_loader').toggleClass('d-none');
+                    $('#c_status').html('STATUS: <span class="badge badge-danger badge-pill">ERROR IN VERIFICATION</span><br/><p class="p-2">Getting back to home...</p>');
+                    setTimeout(function() {
+                        window.location.replace('/');
+                    }, 3000);
+            }
+            });                     
+            } else {
+                let url = 'https://raw.githubusercontent.com/zillasmvec/sample/master/29.json';            
+                let url1 = 'https://raw.githubusercontent.com/zillasmvec/sample/master/30.json';
+                $.ajax({
                 url: url,
                 method: "get",
                 
@@ -165,7 +209,9 @@
                         window.location.replace('/');
                     }, 3000);
             }
-            }); 
+            });
+            }           
+             
 
         } else {
             // false

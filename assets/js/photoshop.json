@@ -24,16 +24,16 @@
             "title": "Selection Tools",
             "description": "Menu Bar and its Options",
             "quiz": "https://forms.gle/1xwfczXXa8F14u6G6",
-            "type": "true",
+            "type": "over",
             "date": "May 01 2020"
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/iDlzmgjS4Sg",
             "day": "Day 04",
             "title": "Layers and Transform",
-            "description": "",
-            "quiz": "https://google.com",
-            "type": "false",
+            "description": "Discussion on different types of blending modes and their usage",
+            "quiz": "https://forms.gle/XybzdTxjfyMzmKJB8",
+            "type": "true",
             "date": "May 02 2020"
         },
         {

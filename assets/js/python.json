@@ -24,16 +24,16 @@
             "title": "Operators and Number Conversions",
             "description": "Various operators and numeric conversions are discussed here",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSf-Y81BCXSI5lIp10FRqR8NRu9ece8Uifr_wDh0fElGOMbakA/viewform?usp=sf_link",
-            "type": "true",
+            "type": "over",
             "date": "May 01 2020"
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/vNb_N24PRvY",
             "day": "Day 04",
             "title": "Alternatives for pre-defined functions",
             "description": "string and numeric conversions without pre-defined functions",
-            "quiz": "https://google.com",
-            "type": "false",
+            "quiz": "https://docs.google.com/forms/d/e/1FAIpQLScJSJnPQ4GuIvBb7Gg5yN1aDeCiy59liaJNmLN-aQPiwajdhg/viewform?usp=sf_link",
+            "type": "true",
             "date": "May 02 2020"
         },
         {
