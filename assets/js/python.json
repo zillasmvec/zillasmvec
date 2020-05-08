@@ -6,7 +6,7 @@
             "title": "Introduction to Python",
             "description": "An introduction on python, its variables and the datatypes are discussed",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdFFS_V3NApIV0kVbLcWktmfkAY_OT0mtTrHBokrCgb1Ei4yg/viewform?usp=sf_link",
-            "type": "over",
+            "type": "true",
             "date": "April 29 2020"
         },
         {
@@ -15,7 +15,7 @@
             "title": "Python Functions",
             "description": "print functions and integer and float methods are discussed",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSfB0jUEHjawvTgrQ76vqJpj5cd5icdWu9pmAaQanRMR2fuS5w/viewform?usp=sf_link",
-            "type": "over",
+            "type": "true",
             "date": "April 30 2020"
         },
         {
@@ -24,7 +24,7 @@
             "title": "Operators and Number Conversions",
             "description": "Various operators and numeric conversions are discussed here",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSf-Y81BCXSI5lIp10FRqR8NRu9ece8Uifr_wDh0fElGOMbakA/viewform?usp=sf_link",
-            "type": "over",
+            "type": "true",
             "date": "May 01 2020"
         },
         {
@@ -37,48 +37,48 @@
             "date": "May 02 2020"
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/gDBBk3PfhCo",
             "day": "Day 05",
             "title": "String and Memory Allocation",
-            "quiz": "https://google.com",
+            "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSfa-R1ByDo1KBJXacnvsq-oqk7iXex2scQ9wKKU5lI-hEWTRg/viewform?usp=sf_link",
             "description": "A deep look into string functions and how memory is allocated in python",
-            "type": "false",
+            "type": "true",
             "date": "May 03 2020"                       
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/r_f7Cj1MAek",
             "day": "Day 06",
             "title": "Collections and Various List Methods",
-            "quiz": "https://google.com",
+            "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSfgzhC7hKbYeM7mSb9EhxwrK8NQj6EU1qmIUZG8eUrZKM2Omg/viewform?usp=sf_link",
             "description": "A discussion on different list and collection methods in python",
-            "type": "false",
+            "type": "true",
             "date": "May 04 2020"            
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/3HBOZQd6Y1o",
             "day": "Day 07",
             "title": "Sets, Tuples and Dictionary",
-            "quiz": "https://google.com",
+            "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdohQskCsAaYKDlSOm74Eu_76hGt0PfzJTAb4gSfagxk_c4vQ/viewform?usp=sf_link",
             "description": "Learn about the sets, tuples and dictionary usage in python",
-            "type": "false",
+            "type": "true",
             "date": "May 05 2020"            
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/6fgfpXCzzu0",
             "day": "Day 08",
-            "quiz": "https://google.com",
+            "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdBZuFn6q7AAm0t-SIg5yr3_1Rv5mGIIBoK3xCkjN2DwqVIhg/viewform?usp=sf_link",
             "title": "Conditional Statements",
             "description": "Learn how conditional statements are used in python",
-            "type": "false",
+            "type": "true",
             "date": "May 06 2020"            
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/Re-A60tdhQE",
             "day": "Day 09",
-            "quiz": "https://google.com",
+            "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdNb373_ClGiGWHcuzB5HGCrLLE2k8ZBfP9CAZeby3Vo3tLHg/viewform?usp=sf_link",
             "title": "Loops and List Comprehension",
             "description": "Usage of loops and list comprehension in detail",
-            "type": "false",
+            "type": "true",
             "date": "May 07 2020"                   
         },
         {

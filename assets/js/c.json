@@ -6,7 +6,7 @@
             "title": "Introduction to Programming",
             "description": "Brief introduction to the programming concepts",
             "quiz": "https://forms.gle/f5UxbDwQ2XrU9AA58",
-            "type": "over",
+            "type": "true",
             "date": "April 29 2020"
         },
         {
@@ -15,7 +15,7 @@
             "title": "Set Up the environment for C",
             "description": "setting up the development environment to write programs in C",
             "quiz": "https://forms.gle/6kpGTuQcNVEPAFEYA",
-            "type": "over",
+            "type": "true",
             "date": "April 30 2020"
         },
         {
@@ -24,7 +24,7 @@
             "title": "Today is a Test Session",
             "description": "Lets check how much you know till now!",
             "quiz": "https://forms.gle/bPcJf7twrcjxPMUh9",
-            "type": "over",
+            "type": "true",
             "date": "May 01 2020"
         },
         {
@@ -37,57 +37,57 @@
             "date": "May 02 2020"
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/pR80CWQKIMY",
             "day": "Day 05",
             "title": "Flow Control",
-            "quiz": "https://google.com",
+            "quiz": "https://forms.gle/WM6xMoNHAQqR5nxs5",
             "description": "Discussion on flow control",
-            "type": "false",
+            "type": "true",
             "date": "May 03 2020"                       
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/R8uCO5DAl2c",
             "day": "Day 06",
             "title": "More about Flow Control",
-            "quiz": "https://google.com",
+            "quiz": "https://forms.gle/LkVyhKdAc2c2GgF68",
             "description": "lets have more though about flow control in C programming language",
-            "type": "false",
+            "type": "true",
             "date": "May 04 2020"            
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/_Kh5aEQuuBI",
             "day": "Day 07",
             "title": "Introduction to function",
-            "quiz": "know about functions and some built-in methods in C",
-            "description": "",
-            "type": "false",
+            "quiz": "https://forms.gle/x57BEmvShtNiQCT66",
+            "description": "know about functions and some built-in methods in C",
+            "type": "true",
             "date": "May 05 2020"            
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/12oGDxOW8Kc",
             "day": "Day 08",
-            "quiz": "https://google.com",
+            "quiz": "https://forms.gle/BrReSHmj6vQB8JkK6",
             "title": "User Defined Functinos",
             "description": "session on how user defined functions work",
-            "type": "false",
+            "type": "true",
             "date": "May 06 2020"            
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/zPaGf6UfBj0",
             "day": "Day 09",
-            "quiz": "https://google.com",
+            "quiz": "https://forms.gle/rwQCZGGEBUDQ7Xcz5",
             "title": "Arrays in C",
             "description": "brief talk on array data structure in C",
-            "type": "false",
+            "type": "true",
             "date": "May 07 2020"            
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/T6EPmEntl_s",
             "day": "Day 10",
-            "quiz": "https://google.com",
+            "quiz": "https://forms.gle/dcH4JvzFxZd1XsseA",
             "title": "Multi Dimensional Arrays",
             "description": "At last lets see about the multi dimensional arrays in C",
-            "type": "false",
+            "type": "true",
             "date": "May 08 2020"            
         },
         {

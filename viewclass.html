@@ -1,0 +1,264 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SMVEC ZILLA - Classes | Department of Computer Science and Engineering</title>
+    <link rel="icon" type="image/png" sizes="3300x2550" href="assets/img/zillalogo-01.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">    
+</head>
+<style>
+    .cr {
+    height: 100vh;
+      display: flex;      
+  }
+  .gr {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+    @media only screen and (max-width: 600px) {
+  .cr {
+      flex-direction: column;      
+      height: 200vh;
+  }
+  .gr {
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+  }
+}
+
+.card-header li {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 800;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+
+
+
+</style>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md navigation-clean sticky-top" style="background-color: #111111;color: #191919;">
+        <div class="container"><a class="navbar-brand" href="/" style="color: rgb(240,23,75);">smveczilla</a><button data-toggle="collapse" class="navbar-toggler text-white" data-target="#navcol-1" style="color: rgb(192,192,192);"><span class="sr-only" style="color: rgb(198,198,198);">Toggle navigation</span><span class="navbar-toggler-icon" style="color: rgb(184,184,184);"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto" style="font-size: 13px;">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/">HOME</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="events.html">EVENTS</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="courses.html">CLASSES</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="courses.html">COURSES</a></li>
+                    <div class="buttons p-1"><button class="btn btn-secondary btn-sm" role="button" onclick="leaveClass();" style="background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Leave Class</button></div>                    
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <div style="background-color: #191919;" class="d-flex justify-content-center align-items-center">
+        <div class="container">            
+            <div class="row cr">
+                            
+                    <div class="col d-flex justify-content-center align-items-center">
+                    <div class="card bg-dark" style="min-width: 100%;">
+                        <div class="card-header">
+                            <p class="text-white h6 font-weight-bold">Quantitive Aptitude Training</p>                            
+                        </div>
+                        <div class="card-body">
+                            <p class="font-weight-light text-light" style="font-size: 0.8em" id="session_topic"></p>
+                            <div class="list-group" id="real_page">
+                              
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <p class="h6 font-weight-light text-muted" style="font-size:0.8em">All the videos provided here are by <a href="https://www.youtube.com/channel/UC8FmKkoVFU20P6WnykizlUg">packet preps</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col gr">
+                    <div id="view_pane" style="width: 100%;">
+                        <div class="card bg-white" style="min-width: 100%;">
+                            <div class="card-header bg-dark">                                
+                                    <ul style="color: white;">
+                                        <li>Action Item</li>                                        
+                                        <li><span id="hours"></span></li>
+                                        <li><span id="minutes"></span></li>
+                                        <li><span id="seconds"></span></li>
+                                    </ul>                                   
+                            </div>
+                            <div class="card-body">
+                                <div class="" id="pane">
+                                    <p class="font-weight-light text-light" id="action_mod" style="font-size: 0.8em"></p>
+                                    
+                                </div>                                
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>        
+    </div>
+    <div class="footer-basic" style="background-color: #191919;color: #ffffff;">
+        <footer>
+            <ul class="list-inline" style="font-size: 12px;">
+                <li class="list-inline-item"><a href="/">Home</a></li>
+                <li class="list-inline-item"><a href="/#contact">Contact</a></li>                
+            </ul>
+            <p class="copyright">Made with <i class="fa fa-heart" style="color: #f0174b;"></i>&nbsp; by smveczilla 2020</p>            
+        </footer>
+        <span id="beta" class="ml-1 small text-danger">V 1.0.0</span>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+<script>
+    function startCountDown(){
+        const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+let countDown = new Date().getTime(),
+    x = setInterval(function() {    
+
+      let now = new Date().getTime(),
+          distance = countDown - now;
+
+        $('#days').html(Math.floor(distance / (day)))
+        $('#hours').html(Math.floor((distance % (day)) / (hour)));
+        $('#minutes').html(Math.floor((distance % (hour)) / (minute)));
+        $('#seconds').html(Math.floor((distance % (minute)) / second));
+
+      //do something later when date is reached
+      //if (distance < 0) {
+      //  clearInterval(x);
+      //  'IT'S MY BIRTHDAY!;
+      //}
+
+    }, second)
+    }
+    function leaveClass() {
+        sessionStorage.removeItem('zilla-class-user-id');
+        window.location.replace('/classes.html');
+    }
+    $(() => {
+        window.addEventListener("beforeunload", function (e) {
+            var confirmationMessage = 'Please leave the class by pressing the Leave Class '
+                                    + 'Your session is still not ended!';
+
+            (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+            return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.        
+        });
+
+        let url = window.location.href;
+        let url_string = new URL(url);
+        var id = url_string.searchParams.get("id");
+
+        if(id !== null && id !== undefined && id !== '') {
+             // clear
+             sessionStorage.setItem('zilla-class-user-id', id);
+        } else {
+            // out
+            alert('Unknown User detected!');
+            window.location.replace('classes.html');
+
+        }
+
+        window.addEventListener('popstate', function(event) {
+            // The popstate event is fired each time when the current history entry changes.
+
+            var r = confirm("You pressed a Back button! Are you sure?!");
+
+            if (r == true) {
+                // Call Back button programmatically as per user confirmation.
+                history.back();
+                // Uncomment below line to redirect to the previous page instead.
+                // window.location = document.referrer // Note: IE11 is not supporting this.
+            } else {
+                // Stay on the current page.
+                history.pushState(null, null, window.location.pathname);
+            }
+
+            history.pushState(null, null, window.location.pathname);
+
+        }, false);
+
+        loadPage();
+        startCountDown();
+     
+
+    });
+
+    function loadPage() {
+        $.ajax({
+            url: 'https://raw.githubusercontent.com/zillasmvec/sample/master/C01.json',
+            method: 'get',
+            success: function(response) {
+                let data  = JSON.parse(response);
+                let con = sessionStorage.getItem('zilla-class-user-id');
+                $('#session_topic').html(`Welcome <strong>${hexToUtf8(con)}</strong>, Day 01 - 2 modules`);
+                let content = '';
+                
+                for(var i in data['01']){
+                    content += ` <a class="list-group-item bg-dark text-light" style="cursor: pointer;">
+                                    <p class="font-weight-normal">${data['01'][i].title}</p>
+                                    <hr class="bg-white" style="opacity: 0.3;"/>
+                                    <div class="d-flex">
+                                        <div class="buttons p-2"><button class="btn btn-secondary btn-sm" role="button" onclick="openPane('video','${data['01'][i].video}');"  style="background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">View Video</button></div>
+                                        <div class="buttons p-2"><button class="btn btn-secondary btn-sm" role="button" onclick="openPane('quiz','${data['01'][i].quiz[Math.floor(Math.random() * data['01'][i].quiz.length)]}');" style="background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Attend Quiz</button></div>                    
+                                     </div>
+                                 </a>`;
+                }
+
+                $('#real_page').html(content);
+
+            },
+            error: function(error) {
+                alert(error);
+            }
+        })
+    }
+
+    function openPane(tope, link) { 
+        $('#pane').toggle('d-none');        
+        $('#pane').html('');
+            if(tope === 'video') {
+                $('#action_mod').html('Rational Proportion Basics');
+                let data = `<div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="${link}?controls=0" allowfullscreen></iframe>
+                            </div>`;
+
+                $('#pane').toggle('d-none');
+                $('#pane').html(data);                
+            }
+            if(tope === 'quiz') {
+                $('#action_mod').html('Rational Proportion Basics');
+                let data = `<div class="embed-responsive embed-responsive-4by3">
+                                <iframe class="embed-responsive-item" src="${link}"></iframe>
+                            </div>`;
+                
+                $('#pane').toggle('d-none');
+                $('#pane').html(data);                
+            }                
+    }
+
+    function hexToUtf8(hex) {
+      return decodeURIComponent('%' + hex.match(/.{1,2}/g).join('%'));
+    }
+</script>
+</html> -->
