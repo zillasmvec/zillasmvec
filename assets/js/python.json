@@ -6,7 +6,7 @@
             "title": "Introduction to Python",
             "description": "An introduction on python, its variables and the datatypes are discussed",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdFFS_V3NApIV0kVbLcWktmfkAY_OT0mtTrHBokrCgb1Ei4yg/viewform?usp=sf_link",
-            "type": "true",
+            "type": "over",
             "date": "April 29 2020"
         },
         {
@@ -15,7 +15,7 @@
             "title": "Python Functions",
             "description": "print functions and integer and float methods are discussed",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSfB0jUEHjawvTgrQ76vqJpj5cd5icdWu9pmAaQanRMR2fuS5w/viewform?usp=sf_link",
-            "type": "true",
+            "type": "over",
             "date": "April 30 2020"
         },
         {
@@ -24,7 +24,7 @@
             "title": "Operators and Number Conversions",
             "description": "Various operators and numeric conversions are discussed here",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSf-Y81BCXSI5lIp10FRqR8NRu9ece8Uifr_wDh0fElGOMbakA/viewform?usp=sf_link",
-            "type": "true",
+            "type": "over",
             "date": "May 01 2020"
         },
         {
@@ -33,7 +33,7 @@
             "title": "Alternatives for pre-defined functions",
             "description": "string and numeric conversions without pre-defined functions",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLScJSJnPQ4GuIvBb7Gg5yN1aDeCiy59liaJNmLN-aQPiwajdhg/viewform?usp=sf_link",
-            "type": "true",
+            "type": "over",
             "date": "May 02 2020"
         },
         {
@@ -42,7 +42,7 @@
             "title": "String and Memory Allocation",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSfa-R1ByDo1KBJXacnvsq-oqk7iXex2scQ9wKKU5lI-hEWTRg/viewform?usp=sf_link",
             "description": "A deep look into string functions and how memory is allocated in python",
-            "type": "true",
+            "type": "over",
             "date": "May 03 2020"                       
         },
         {
@@ -51,7 +51,7 @@
             "title": "Collections and Various List Methods",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSfgzhC7hKbYeM7mSb9EhxwrK8NQj6EU1qmIUZG8eUrZKM2Omg/viewform?usp=sf_link",
             "description": "A discussion on different list and collection methods in python",
-            "type": "true",
+            "type": "over",
             "date": "May 04 2020"            
         },
         {
@@ -60,7 +60,7 @@
             "title": "Sets, Tuples and Dictionary",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdohQskCsAaYKDlSOm74Eu_76hGt0PfzJTAb4gSfagxk_c4vQ/viewform?usp=sf_link",
             "description": "Learn about the sets, tuples and dictionary usage in python",
-            "type": "true",
+            "type": "over",
             "date": "May 05 2020"            
         },
         {
@@ -69,7 +69,7 @@
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdBZuFn6q7AAm0t-SIg5yr3_1Rv5mGIIBoK3xCkjN2DwqVIhg/viewform?usp=sf_link",
             "title": "Conditional Statements",
             "description": "Learn how conditional statements are used in python",
-            "type": "true",
+            "type": "over",
             "date": "May 06 2020"            
         },
         {
@@ -78,23 +78,23 @@
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdNb373_ClGiGWHcuzB5HGCrLLE2k8ZBfP9CAZeby3Vo3tLHg/viewform?usp=sf_link",
             "title": "Loops and List Comprehension",
             "description": "Usage of loops and list comprehension in detail",
-            "type": "true",
+            "type": "over",
             "date": "May 07 2020"                   
         },
         {
-            "video": "https://youtube.com/",
+            "video": "https://www.youtube.com/embed/kwQX1vpepI4",
             "day": "Day 10",
-            "quiz": "https://google.com",
+            "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSeEv0ppoDG8ePbE2esObkNUvikFgreU3fcnmkFLn8SUUe7eRQ/viewform?usp=sf_link",
             "title": "Functions in python",
             "description": "Deep dive into functions in python and its usage",
-            "type": "false",
+            "type": "over",
             "date": "May 08 2020"            
         },
         {
             "day": "Completion",            
             "title": "Course Completion",
             "description": "",
-            "quiz": "https://google.com",
+            "quiz": "https://forms.gle/abiKeEpX4KSgg3Ws9",
             "type": "false"
         }                
     ]

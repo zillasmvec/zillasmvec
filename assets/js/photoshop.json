@@ -6,7 +6,7 @@
             "title": "Introduction and Interface",
             "description": "A small introduction on the interface of the photoshop application is discussed.",
             "quiz": "https://docs.google.com/forms/d/e/1FAIpQLScBx9tFR-ldzuV4DDTD9xUcuuXD8w2TWoQGY2jglPi3ie16OA/viewform",
-            "type": "true",
+            "type": "over",
             "date": "April 29 2020"
         },
         {
@@ -15,7 +15,7 @@
             "title": "Basic Tools",
             "description": "",
             "quiz": "https://forms.gle/W1ZwzsscaPHmYEMw5",
-            "type": "true",
+            "type": "over",
             "date": "April 30 2020"
         },
         {
@@ -24,7 +24,7 @@
             "title": "Selection Tools",
             "description": "Menu Bar and its Options",
             "quiz": "https://forms.gle/1xwfczXXa8F14u6G6",
-            "type": "true",
+            "type": "over",
             "date": "May 01 2020"
         },
         {
@@ -33,7 +33,7 @@
             "title": "Layers and Transform",
             "description": "Discussion on different types of blending modes and their usage",
             "quiz": "https://forms.gle/XybzdTxjfyMzmKJB8",
-            "type": "true",
+            "type": "over",
             "date": "May 02 2020"
         },
         {
@@ -42,7 +42,7 @@
             "title": "Content Aware Fill and Vanishing Point",
             "quiz": "https://forms.gle/Sz7xrMThNBiE6uqx7",
             "description": "Discussion on content awareness and the vanishing point, an interactive session.",
-            "type": "true",
+            "type": "over",
             "date": "May 03 2020"            
         },
         {
@@ -51,7 +51,7 @@
             "title": "Poster Design",
             "quiz": "https://forms.gle/C5SgTP9wzdbYSGQw5",
             "description": "",
-            "type": "true",
+            "type": "over",
             "date": "May 04 2020"            
         },
         {
@@ -60,7 +60,7 @@
             "title": "Image Manipulation in photoshop",
             "quiz": "https://forms.gle/WjTP2mH5CrJ7yLmx9",
             "description": "Manipulating two different images to create a new image",
-            "type": "true",
+            "type": "over",
             "date": "May 05 2020"            
         },
         {
@@ -69,7 +69,7 @@
             "quiz": "https://forms.gle/8ingCWTQSJFrEVdA9",
             "title": "Smart Object",
             "description": "Will have a brief discussion on smart objects and adjustment layers",
-            "type": "true",
+            "type": "over",
             "date": "May 06 2020"            
         },
         {
@@ -78,7 +78,7 @@
             "quiz": "https://forms.gle/juwRXTq4zcKCZTMB8",
             "title": "Assignment Session",
             "description": "Simple demo on how typography should be done",
-            "type": "true",
+            "type": "over",
             "date": "May 07 2020"            
         },
         {
@@ -87,14 +87,14 @@
             "quiz": "https://forms.gle/EwNaf7Jte3pxtV2F8",
             "title": "2D Animation",
             "description": "lets see some simple and basic 2d animation in photoshop",
-            "type": "true",
+            "type": "over",
             "date": "May 08 2020"            
         },
         {
             "day": "Completion",            
             "title": "Course Completion",
             "description": "",
-            "quiz": "https://google.com",
+            "quiz": "https://forms.gle/abiKeEpX4KSgg3Ws9",
             "type": "false"
         }                
     ]

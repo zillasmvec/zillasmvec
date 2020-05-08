@@ -147,6 +147,7 @@
                                 <option value="05">Day 07</option>
                                 <option value="06">Day 08</option>
                                 <option value="07">Day 09</option>
+                                <option value="08">Day 10</option>
                             </select><br/>
                             <input type="submit" class="btn btn-sm" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);border: none;" value="Download"/>
                         </form>
@@ -388,8 +389,18 @@
                             </div>
                             <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">
-                                    <p class="h5 font-weight-light m-2">I know your interested</p>
-                                    <p class="h6 font-weight-bold m-2">Wait Till Next Day</p>                                  
+                                    <p class="h5 font-weight-light m-2">Yay! You have completed the entire course</p>
+                                    <p class="h6 font-weight-bold m-2">Course Completion will be graded under these guidelines:</p>
+                                    <ul class="list-group bg-dark">
+                                    <small>
+                                        <li class="list-group-item bg-dark">Should attend all the 10 day quiz</li>
+                                        <li class="list-group-item bg-dark">Should be a Student</li>
+                                        <li class="list-group-item bg-dark">Should obtain minimum of 50% of the marks average in all day quizes</li>
+                                        <li class="list-group-item bg-dark">Should fill out the course completion form with correct and valid details</li>
+                                    </ul>  
+                                    </small>    
+                                    <p class="text-muted"><small>By filling this form you accept the following guidelines and complete this course.</small></p>
+                                    <div class="buttons mt-3"><a class="btn btn-secondary btn-sm" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Fill Form</a></div>                            
                                 </div>
                             </div>
                             </div>`;              
@@ -492,8 +503,18 @@
                             </div>
                             <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">
-                                    <p class="h5 font-weight-light m-2">I know your interested</p>
-                                    <p class="h6 font-weight-bold m-2">Wait Till Next Day</p>                                
+                                    <p class="h5 font-weight-light m-2">Yay! You have completed the entire course</p>
+                                    <p class="h6 font-weight-bold m-2">Course Completion will be graded under these guidelines:</p>
+                                    <ul class="list-group bg-dark">
+                                    <small>
+                                        <li class="list-group-item bg-dark">Should attend all the 10 day quiz</li>
+                                        <li class="list-group-item bg-dark">Should be a Student</li>
+                                        <li class="list-group-item bg-dark">Should obtain minimum of 50% of the marks average in all day quizes</li>
+                                        <li class="list-group-item bg-dark">Should fill out the course completion form with correct and valid details</li>
+                                    </ul>  
+                                    </small>    
+                                    <p class="text-muted"><small>By filling this form you accept the following guidelines and complete this course.</small></p>
+                                    <div class="buttons mt-3"><a class="btn btn-secondary btn-sm" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Fill Form</a></div>                            
                                 </div>
                             </div>
                             </div>`;              
@@ -520,7 +541,7 @@
                 let count = 1;                
                 $.each(data.course, function(key, val) {  
 
-                    if(val.type === 'true') {
+                    if(val.type === 'false') {
                         output += `<div class="card" style="background-color: #111111;">
                             <div class="card-header" id="${count}" style="cursor: pointer; border-bottom: 1px solid whitesmoke;" data-toggle="collapse" data-target="#collapse${count}" aria-expanded="true" aria-controls="collapseOne">
                                 <h2 class="mb-0">
@@ -576,8 +597,18 @@
                             </div>
                             <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">
-                                    <p class="h5 font-weight-light m-2">I know your interested</p>
-                                    <p class="h6 font-weight-bold m-2">Wait Till Next Day</p>                                
+                                    <p class="h5 font-weight-light m-2">Yay! You have completed the entire course</p>
+                                    <p class="h6 font-weight-bold m-2">Course Completion will be graded under these guidelines:</p>
+                                    <ul class="list-group bg-dark">
+                                    <small>
+                                        <li class="list-group-item bg-dark">Should attend all the 10 day quiz</li>
+                                        <li class="list-group-item bg-dark">Should be a Student</li>
+                                        <li class="list-group-item bg-dark">Should obtain minimum of 50% of the marks average in all day quizes</li>
+                                        <li class="list-group-item bg-dark">Should fill out the course completion form with correct and valid details</li>
+                                    </ul>  
+                                    </small>    
+                                    <p class="text-muted"><small>By filling this form you accept the following guidelines and complete this course.</small></p>
+                                    <div class="buttons mt-3"><a class="btn btn-secondary btn-sm" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Fill Form</a></div>                            
                                 </div>
                             </div>
                             </div>`;              
