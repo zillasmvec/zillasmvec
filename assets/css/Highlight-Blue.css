@@ -155,7 +155,7 @@
 }
 
 .animated-button:hover .tex:after{
-  content: 'TAKE COURSE';  
+  content: 'COURSE CLOSED';  
 }
 
 .animated-button:hover .texs {

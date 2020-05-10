@@ -92,7 +92,7 @@
             <div class="col-12">
                 <h5 class="h4 mb-1 font-weight-light" id="course_name"></h5>
                 <p style="font-size: 0.8em;" class="font-weight-light">course by <strong>smveczilla</strong></p>                
-                <p class="font-weight-light" style="font-size:0.8em">Course duration: <strong>April 29 2020 - May 08 2020 (10 days)</strong></p>                                
+                <p class="font-weight-light" style="font-size:0.8em"><p class="badge badge-warning badge-pill">Closed</p></p>                                
                 <div class="row">
                     <div class="buttons ml-3 p-1"><a class="btn btn-secondary btn-sm" role="button" data-toggle="modal" data-target="#authorModal" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">View Author</a></div>
                     <div class="buttons ml-3 p-1"><a class="btn btn-secondary btn-sm" role="button" data-toggle="modal" data-target="#guideModal" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Course Guidelines</a></div>
@@ -103,7 +103,7 @@
                         </div>                                                            
                 </div>                
                 <div class="row p-2 mb-1">
-                    <p class="marquee p-1">All the day quizzes are open only for today use this and complete out those who missed to attend them in the course duration. This is the last day of the zilla course.</p>
+                    <p class="marquee p-1">This course is closed currently. You can make use of the video instead available below.</p>
                 </div>
             <br/>
             <div class="accordion" id="accordionExample">
@@ -148,6 +148,7 @@
                                 <option value="06">Day 08</option>
                                 <option value="07">Day 09</option>
                                 <option value="08">Day 10</option>
+                                <option value="missed">Missed</option>
                             </select><br/>
                             <input type="submit" class="btn btn-sm" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);border: none;" value="Download"/>
                         </form>
@@ -241,12 +242,17 @@
                     url: URL,
                     method: "get",                
                     success: function(response) {
-                        let data = JSON.parse(response);
-
+                        let data = JSON.parse(response);                        
                         if(course === 'python') {
-                            $.each(data.python, function(pData) {                                                     
-                                let dates = data.python[pData].C_date.split(' ')[0].split('-')[2]; 
+                            $.each(data.python, function(pData) {    
+                                let dates = '';
+                                if(datte === 'missed') {
+                                    dates = 'missed';
+                                } else {
+                                    dates = data.python[pData].C_date.split(' ')[0].split('-')[2]; 
+                                }                                                                                 
                                 let mail = data.python[pData].Email.toLowerCase();                                                               
+                                console.log(mail, dates);
                                 if($('#user_email').val().toLowerCase() === mail.trim() && $("#user_day :selected").val() === dates) {
                                     // user matched
                                     window.open(data.python[pData].url);                                    
@@ -387,7 +393,7 @@
                                 </button>
                                 </h2>
                             </div>
-                            <div id="collapse${count}" class="collapse show" aria-labelledby="${count}" data-parent="#accordionExample">
+                            <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">
                                     <p class="h5 font-weight-light m-2">Yay! You have completed the entire course</p>
                                     <p class="h6 font-weight-bold m-2">Course Completion will be graded under these guidelines:</p>
@@ -400,7 +406,7 @@
                                     </ul>  
                                     </small>    
                                     <p class="text-muted"><small>By filling this form you accept the following guidelines and complete this course.</small></p>
-                                    <div class="buttons mt-3"><a class="btn btn-secondary btn-sm" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Fill Form</a></div>                            
+                                    <div class="buttons mt-3"><a class="btn btn-secondary btn-sm disabled" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Fill Form</a></div>                            
                                 </div>
                             </div>
                             </div>`;              
@@ -501,7 +507,7 @@
                                 </button>
                                 </h2>
                             </div>
-                            <div id="collapse${count}" class="collapse show" aria-labelledby="${count}" data-parent="#accordionExample">
+                            <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">
                                     <p class="h5 font-weight-light m-2">Yay! You have completed the entire course</p>
                                     <p class="h6 font-weight-bold m-2">Course Completion will be graded under these guidelines:</p>
@@ -514,7 +520,7 @@
                                     </ul>  
                                     </small>    
                                     <p class="text-muted"><small>By filling this form you accept the following guidelines and complete this course.</small></p>
-                                    <div class="buttons mt-3"><a class="btn btn-secondary btn-sm" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Fill Form</a></div>                            
+                                    <div class="buttons mt-3"><a class="btn btn-secondary btn-sm disabled" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Fill Form</a></div>                            
                                 </div>
                             </div>
                             </div>`;              
@@ -541,7 +547,7 @@
                 let count = 1;                
                 $.each(data.course, function(key, val) {  
 
-                    if(val.type === 'false') {
+                    if(val.type === 'true') {
                         output += `<div class="card" style="background-color: #111111;">
                             <div class="card-header" id="${count}" style="cursor: pointer; border-bottom: 1px solid whitesmoke;" data-toggle="collapse" data-target="#collapse${count}" aria-expanded="true" aria-controls="collapseOne">
                                 <h2 class="mb-0">
@@ -595,7 +601,7 @@
                                 </button>
                                 </h2>
                             </div>
-                            <div id="collapse${count}" class="collapse show" aria-labelledby="${count}" data-parent="#accordionExample">
+                            <div id="collapse${count}" class="collapse" aria-labelledby="${count}" data-parent="#accordionExample">
                                 <div class="card-body bg-dark">
                                     <p class="h5 font-weight-light m-2">Yay! You have completed the entire course</p>
                                     <p class="h6 font-weight-bold m-2">Course Completion will be graded under these guidelines:</p>
@@ -608,7 +614,7 @@
                                     </ul>  
                                     </small>    
                                     <p class="text-muted"><small>By filling this form you accept the following guidelines and complete this course.</small></p>
-                                    <div class="buttons mt-3"><a class="btn btn-secondary btn-sm" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Fill Form</a></div>                            
+                                    <div class="buttons mt-3"><a class="btn btn-secondary btn-sm disabled" role="button" href="${val.quiz}" style="cursor:pointer;background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Fill Form</a></div>                            
                                 </div>
                             </div>
                             </div>`;              

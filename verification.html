@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SMVEC ZILLA - Verification | Department of Computer Science and Engineering</title>
+    <link rel="icon" type="image/png" sizes="3300x2550" href="assets/img/zillalogo-01.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">    
+</head>
+<style>
+    .cr {
+    height: 100vh;
+      display: flex;      
+  }
+  .gr {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+    @media only screen and (max-width: 600px) {
+  .cr {
+      flex-direction: column;      
+      height: 200vh;
+  }
+  .gr {
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+  }
+  img{
+      height: 200px;
+  }
+}
+
+.card-header li {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 800;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+
+
+
+</style>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md navigation-clean sticky-top" style="background-color: #111111;color: #191919;">
+        <div class="container"><a class="navbar-brand" href="/" style="color: rgb(240,23,75);">smveczilla</a><button data-toggle="collapse" class="navbar-toggler text-white" data-target="#navcol-1" style="color: rgb(192,192,192);"><span class="sr-only" style="color: rgb(198,198,198);">Toggle navigation</span><span class="navbar-toggler-icon" style="color: rgb(184,184,184);"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto" style="font-size: 13px;">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/">HOME</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="events.html">EVENTS</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="team.html">TEAM</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="courses.html">COURSES</a></li>            
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <div style="background-color: #191919;" class="d-flex justify-content-center align-items-center">
+        <div class="container">            
+            <div class="row cr">
+                <div class="spinner-border text-light" id="pre_loader" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                    <div class="col d-flex justify-content-center align-items-center">
+                    <div class="card bg-dark" style="min-width: 100%;">
+                        <div class="card-header">
+                            <p class="text-white h6 font-weight-bold">Course Completion</p>                            
+                        </div>
+                        <div class="card-body">
+                            <p class="font-weight-light text-light" style="font-size: 0.8em" id="session_topic"></p>
+                            <div class="p-1 text-light" id="real_content">
+                             
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <p class="h6 font-weight-light text-muted" style="font-size:0.8em">All the information provided above belongs to <a href="https://smveczilla.in">SMVEC ZILA</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col gr">
+                    <div id="view_pane" style="width: 100%;">
+                        <div class="card bg-dark" style="min-width: 100%;">
+                            <div class="card-header bg-dark">                                                                                          
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-center align-items-center">
+                                  <img src="" id="preview_certificate" height="300px"/>                                    
+                                </div>                                
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>        
+    </div>
+    <div class="footer-basic" style="background-color: #191919;color: #ffffff;">
+        <footer>
+            <ul class="list-inline" style="font-size: 12px;">
+                <li class="list-inline-item"><a href="/">Home</a></li>
+                <li class="list-inline-item"><a href="/#contact">Contact</a></li>                
+            </ul>
+            <p class="copyright">Made with <i class="fa fa-heart" style="color: #f0174b;"></i>&nbsp; by smveczilla 2020</p>            
+        </footer>
+        <span id="beta" class="ml-1 small text-danger">V 1.0.0</span>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+<script>
+    $(() => {
+
+        let url = window.location.href;
+        let url_string = new URL(url);
+        var course = url_string.searchParams.get("course");
+        var id = url_string.searchParams.get("id");
+                                       
+        if(course!==''&&course!==null&&course!==undefined&&id!==''&&id!==null&&id!==undefined) {
+            searchForId(course, id);
+        } else {            
+            alert('Verification Failed!');
+            window.location.replace('/');            
+        }        
+        
+
+    });
+
+    let searchForId = (course, id) => {
+        var temp_ID = null;
+        $.ajax({
+            url: 'https://raw.githubusercontent.com/zillasmvec/zcourses/master/safeme.json',
+            method:'get',
+            success: function(response) {
+
+                let newData = JSON.parse(response);
+                                
+                let specificNode = newData[course];                
+                for(let i in specificNode) {
+                    if(specificNode[i].UUID === id) {
+                        console.log(specificNode[i]);
+                            $('#pre_loader').toggleClass('d-none');
+                            updateVerification(specificNode[i], course, specificNode[i].UUID);
+                           break;
+                    } 
+                }
+                
+            },
+            error: function(error) {
+                alert(error);
+            }            
+        });
+            return temp_ID;
+               
+    }
+   
+    let updateVerification= (recievedData, course, id) => {
+        
+
+        if(recievedData !== null) {            
+            if(course === 'python') {
+
+            $('#real_content').html('');
+
+            let result = {
+                id: recievedData.UUID,
+                name: recievedData.Name,
+                course: "Basics of Python Programming",
+                courseURL: course,
+                img_url: `https://raw.githubusercontent.com/zillasmvec/zcourses/master/Course_Completion_Images/Certificate_Basics_of_Python_Programming_2020-05-09/${recievedData.UUID}.jpg`
+            }   
+
+            let temp_download_url = `https://github.com/zillasmvec/zcourses/raw/master/Course_Completion_Pdfs/Certificate_Basics_of_Python_Programming_2020-05-09/${recievedData.UUID}.pdf`;
+
+            let data = `<p class="h4 font-weight-light">${result.name}<span class="h6 font-weight-normal"> completed ${result.course}</span></p>
+                              <p class="h6 font-weight-bold">May 8, 2020</p>
+                              <p class="h6 font-weight-bold">Total of 10 days</p>
+                              <p class="font-weight-light">${result.name} has been validated and verified upon their successful completion of the <a href="/learn.html?course=${result.courseURL}">course</a>.</p>
+                              <div class="buttons p-1"><button class="btn btn-secondary btn-sm" role="button" onclick="javascript:window.open('${temp_download_url}');" style="background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Download Certificate</button></div>`;
+
+
+            $('#real_content').html(data);
+            $('#preview_certificate').attr('src', result.img_url);
+
+
+            } else if(course === 'c') {
+
+            $('#real_content').html('');
+
+            let result = {
+                id: recievedData.UUID,
+                name: recievedData.Name,
+                course: "Basics of C Programming",
+                courseURL: course,
+                img_url: `https://raw.githubusercontent.com/zillasmvec/zcourses/master/Course_Completion_Images/Certificate_Basics_of_C_Programming_2020-05-09/${recievedData.UUID}.jpg`
+            }   
+
+            let temp_download_url = `https://github.com/zillasmvec/zcourses/raw/master/Course_Completion_Pdfs/Certificate_Basics_of_C_Programming_2020-05-09/${recievedData.UUID}.pdf`;
+
+            let data = `<p class="h4 font-weight-light">${result.name}<span class="h6 font-weight-normal"> completed ${result.course}</span></p>
+                            <p class="h6 font-weight-bold">May 8, 2020</p>
+                            <p class="h6 font-weight-bold">Total of 10 days</p>
+                            <p class="font-weight-light">${result.name} has been validated and verified upon their successful completion of the <a href="/learn.html?course=${result.courseURL}">course</a>.</p>
+                            <div class="buttons p-1"><button class="btn btn-secondary btn-sm" role="button" onclick="javascript:window.open('${temp_download_url}');" style="background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Download Certificate</button></div>`;
+
+
+            $('#real_content').html(data);
+            $('#preview_certificate').attr('src', result.img_url);
+
+
+            } else if(course === 'photoshop') {
+
+            $('#real_content').html('');
+
+            let result = {
+                id: recievedData.UUID,
+                name: recievedData.Name,
+                course: "Basics of Photoshop",
+                courseURL: course,
+                img_url: `https://raw.githubusercontent.com/zillasmvec/zcourses/master/Course_Completion_Images/Certificate_Basics_of_Photoshop_2020-05-09/${recievedData.UUID}.jpg`
+            }   
+
+            let temp_download_url = `https://github.com/zillasmvec/zcourses/raw/master/Course_Completion_Pdfs/Certificate_Basics_of_Photoshop_2020-05-09/${recievedData.UUID}.pdf`;
+
+            let data = `<p class="h4 font-weight-light">${result.name}<span class="h6 font-weight-normal"> completed ${result.course}</span></p>
+                            <p class="h6 font-weight-bold">May 8, 2020</p>
+                            <p class="h6 font-weight-bold">Total of 10 days</p>
+                            <p class="font-weight-light">${result.name} has been validated and verified upon their successful completion of the <a href="/learn.html?course=${result.courseURL}">course</a>.</p>
+                            <div class="buttons p-1"><button class="btn btn-secondary btn-sm" role="button" onclick="javascript:window.open('${temp_download_url}');" style="background-color: #f0174b;color: rgb(255,255,255);font-family: Baloo, cursive;border: none;">Download Certificate</button></div>`;
+
+
+            $('#real_content').html(data);
+            $('#preview_certificate').attr('src', result.img_url);
+
+            }            
+
+        }
+        else {
+            $('#pre_loader').toggleClass('d-none');
+            alert('Not allowed to access the site!');
+            window.location.replace('/');
+        }
+                                   
+
+    };
+
+
+</script>
+</html>
