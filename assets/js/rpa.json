@@ -1,0 +1,54 @@
+{
+    "course": [
+        {
+            "video": "https://www.youtube.com/embed/rfx5i7wsg_w?controls=0",
+            "day": "Installation of Blue Prism PART-1",            
+            "description": "Install the blue prism for taking this course"
+        },
+        {
+            "video": "https://www.youtube.com/embed/rdoFScaViPw?controls=0",
+            "day": "Blue Prism Modules PART-2",            
+            "description": "lets look at some of their modules"
+        },
+        {
+            "video": "https://www.youtube.com/embed/tZtguTtzfJ8?controls=0",
+            "day": "Process Studio PART-3",            
+            "description": "Deep into the process studio in the IDE"
+        },
+        {
+            "video": "https://www.youtube.com/embed/VeYybYxpZdE?controls=0",
+            "day": "Object Studio PART-4",            
+            "description": "Deep into the object studio in the IDE"
+        },
+        {
+            "video": "https://www.youtube.com/embed/CqeRvUdbQ8c?controls=0",
+            "day": "Application Modeller PART-5",            
+            "description": "Discussion on application modules in the object studio"
+        },
+        {
+            "video": "https://www.youtube.com/embed/AK3GPfzFAIw?controls=0",
+            "day": "Use Case Overview, Centrix Data Solutions PART-6",            
+            "description": "Training on an example based solution of a desktop app 'centrix'"
+        },
+        {
+            "video": "https://www.youtube.com/embed/7bft49hzVCs?controls=0",
+            "day": "Centrix Login PART-7",            
+            "description": "Centrix Login discussion in deep dive"
+        },
+        {
+            "video": "https://www.youtube.com/",
+            "day": "Comming Soon | PART-8",            
+            "description": "Comming Soon"
+        },
+        {
+            "video": "https://www.youtube.com/",
+            "day": "Comming Soon | PART-9",            
+            "description": "Comming Soon"
+        },
+        {
+            "video": "https://www.youtube.com/",
+            "day": "Comming Soon | PART-10",            
+            "description": "Comming Soon"
+        }
+    ]
+}

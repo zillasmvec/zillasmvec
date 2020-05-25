@@ -158,6 +158,10 @@
   content: 'COURSE CLOSED';  
 }
 
+.animated-button:hover .gex:after{
+  content: 'TAKE COURSE';  
+}
+
 .animated-button:hover .texs {
   display: none;
 }

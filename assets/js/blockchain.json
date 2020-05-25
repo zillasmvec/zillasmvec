@@ -1,0 +1,55 @@
+{
+    "course": [
+        {
+            "video": "https://www.youtube.com/embed/allNikZslzM?controls=0",
+            "day": "Introduction to Blockchain",            
+            "description": "Brief introduction to the blockchain environment"
+        },
+        {
+            "video": "https://www.youtube.com/embed/xeX4xyvOxO0?controls=0",
+            "day": "Introduction to DApp",    
+            "description": "Brief introduction to the decentralized"                                   
+        },
+        {
+            "video": "https://www.youtube.com/embed/FykIpOh9Yao?controls=0",
+            "day": "RemixEthereum IDE",    
+            "description": "Remix ethereum IDE overview"                                   
+        },
+        {
+            "video": "https://www.youtube.com/embed/-CNF8g6IIfQ?controls=0",
+            "day": "Solidity DataTypes",    
+            "description": "Brief discussion on solidity data structures"                                   
+        },
+        {
+            "video": "https://www.youtube.com/embed/tnJOLMVUbwA?controls=0",
+            "day": "Simple SmartContract",    
+            "description": "Overview of Simple SmartContract"                                   
+        },
+        {
+            "video": "https://www.youtube.com/embed/CJ0ErU6Fo1w?controls=0",
+            "day": "Solidity Array",    
+            "description": "Brief introduction to the Solidity Array"                                   
+        },
+        {
+            "video": "https://www.youtube.com/embed/0VVvUwY0Yk8?controls=0",
+            "day": "Solidity Structure",    
+            "description": "Let see about the solidity structure"                                   
+        },
+        {
+            "video": "https://www.youtube.com/embed/LziSQEG-ta4?controls=0",
+            "day": "Solidity Mapping",    
+            "description": "Brief about Solidity Mapping"                                   
+        },
+        {
+            "video": "https://www.youtube.com/embed/ig2GKMGeseY?controls=0",
+            "day": "Python Dapp Setup",    
+            "description": "Setup Decentralized an Application"                                   
+        },
+        {
+            "video": "https://www.youtube.com/embed/ctVNFvPn_B8?controls=0",
+            "day": "Python script for Solidity smart contract",    
+            "description": "finally last section of the course"                                   
+        }
+             
+    ]
+}
