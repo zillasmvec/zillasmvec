@@ -36,19 +36,9 @@
             "description": "Centrix Login discussion in deep dive"
         },
         {
-            "video": "https://www.youtube.com/",
-            "day": "Comming Soon | PART-8",            
-            "description": "Comming Soon"
-        },
-        {
-            "video": "https://www.youtube.com/",
-            "day": "Comming Soon | PART-9",            
-            "description": "Comming Soon"
-        },
-        {
-            "video": "https://www.youtube.com/",
-            "day": "Comming Soon | PART-10",            
-            "description": "Comming Soon"
+            "video": "https://www.youtube.com/embed/AVr1N9HzKSQ?controls=0",
+            "day": "Centrix Orders Menu PART-8",            
+            "description": "Centrix Order's Menu discussion"
         }
     ]
 }
